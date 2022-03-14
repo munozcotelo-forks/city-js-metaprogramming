@@ -1,4 +1,5 @@
 import { Component } from './component';
+import { MoviesService } from './services/services';
 
 // @ts-ignore
 @Component({
@@ -7,22 +8,26 @@ import { Component } from './component';
     <h1>
         Welcome to {{title}}!
     </h1>
-    <img alt="CityJS Logo" src="./assets/logo.png" width="300">
+    <img alt="CityJS Logo" src="{{imgeUrl}}" width="300">
 </div>
-<h2>MetaProgramming in TypeScript </h2>
+<h2>{{subTitle}}</h2>
 <ul>
     <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">@danduh81</a>
+        <h2>
+          <a target="_blank" href="https://angular.io/tutorial">@danduh81</a>
         </h2>
     </li>
 </ul>
 `,
   selector: 'app-hero-component',
-  templateUrl: 'test.json',
   styleUrls: ['./hero.component.scss'],
+  provide: [MoviesService],
 })
 export class HeroComponent {
-  public title = 'Welcome to CityJS';
+  public imgeUrl =
+    'https://github.com/danduh/city-js-metaprogramming/raw/cdecd879b9c130f61ee8c10f784cb3c5ef5557fe/logo.png';
+  public title = 'Welcome to CityJS 2022';
+  public subTitle = 'MetaProgramming in TypeScript from 0 to 100';
 
   constructor() {}
 }

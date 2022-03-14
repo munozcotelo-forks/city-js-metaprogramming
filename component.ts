@@ -1,11 +1,11 @@
-import axios from 'axios';
-
+import 'reflect-metadata';
 declare const document: Document;
 export interface ComponentConfig {
   template?: string;
   selector: string;
   templateUrl?: string;
   styleUrls: string[];
+  provide?: any[];
 }
 
 export const Component = (conf: ComponentConfig) => {
