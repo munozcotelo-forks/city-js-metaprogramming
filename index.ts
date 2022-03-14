@@ -29,5 +29,7 @@ export class HeroComponent {
   public title = 'Welcome to CityJS 2022';
   public subTitle = 'MetaProgramming in TypeScript from 0 to 100';
 
-  constructor() {}
+  constructor(service: MoviesService) {
+    console.log(service.getMovies());
+  }
 }

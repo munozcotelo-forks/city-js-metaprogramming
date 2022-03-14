@@ -1,4 +1,4 @@
-import 'reflect-metadata';
+// import 'reflect-metadata';
 
 interface Type<T> {
   new (...args: any[]): T;
