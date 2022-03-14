@@ -1,5 +1,5 @@
-import 'reflect-metadata';
-import 'core-js/es7/reflect';
+// import 'reflect-metadata';
+import 'core-js';
 declare const document: Document;
 export interface ComponentConfig {
   template?: string;
