@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import 'core-js/es7/reflect';
 declare const document: Document;
 export interface ComponentConfig {
   template?: string;
