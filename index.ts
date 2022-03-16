@@ -9,15 +9,9 @@ import { MoviesService } from './services/services';
         Welcome to {{title}}!
     </h1>
     <img alt="CityJS Logo" src="{{imgeUrl}}" width="300">
+    <h2>{{subTitle}}</h2>
+    <h3><a target="_blank" href="https://angular.io/tutorial">@danduh81</a></h3>
 </div>
-<h2>{{subTitle}}</h2>
-<ul>
-    <li>
-        <h2>
-          <a target="_blank" href="https://angular.io/tutorial">@danduh81</a>
-        </h2>
-    </li>
-</ul>
 `,
   selector: 'app-hero-component',
   styleUrls: ['./hero.component.scss'],
