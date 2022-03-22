@@ -11,6 +11,7 @@ import { MoviesService } from './services/services';
     <img alt="CityJS Logo" src="{{imgeUrl}}" width="300">
     <h2>{{subTitle}}</h2>
     <h3><a target="_blank" href="https://angular.io/tutorial">@danduh81</a></h3>
+    <p>{{data}}</p>
 </div>
 `,
   selector: 'app-hero-component',
@@ -18,12 +19,13 @@ import { MoviesService } from './services/services';
   provide: [MoviesService],
 })
 export class HeroComponent {
+  public data = '';
   public imgeUrl =
     'https://github.com/danduh/city-js-metaprogramming/raw/cdecd879b9c130f61ee8c10f784cb3c5ef5557fe/logo.png';
-  public title = 'Welcome to CityJS 2022';
+  public title = 'CityJS 2022';
   public subTitle = 'MetaProgramming in TypeScript from 0 to 100';
 
   constructor(service: MoviesService) {
-    console.log(service.getMovies());
+    this.data = service.getMovies()
   }
 }
