@@ -14,6 +14,7 @@ export const Component = (conf: ComponentConfig) => {
   return async function (clazz) {
     console.log(conf.provide);
     let tokens = Reflect.getMetadata('design:paramtypes', clazz) || [];
+
     console.log('tokens', tokens);
 
     let injections = tokens.map((token) => Injector.resolve<any>(token));
